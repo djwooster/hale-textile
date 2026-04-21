@@ -1,26 +1,185 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Hale Textile Studio Design Tokens ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Palette */
+  --terracotta: #d4614a;
+  --terracotta-light: #e8846f;
+  --terracotta-dark: #b34f3a;
+  --navy: #0A2A3A;
+  --navy-mid: #133a50;
+  --navy-light: #1e4f6e;
+  --cream: #F7F3EE;
+  --warm-white: #FBF9F6;
+  --sand: #E8DECE;
+  --linen: #D4C9B8;
+  --charcoal: #1C1A18;
+  --muted-rose: #EDD5CA;
+  --warm-gray: #8A7F74;
+  --deep-warm: #3D2B1F;
+
+  /* Shadcn overrides → warm palette */
+  --background: #FBF9F6;
+  --foreground: #1C1A18;
+  --card: #F7F3EE;
+  --card-foreground: #1C1A18;
+  --popover: #F7F3EE;
+  --popover-foreground: #1C1A18;
+  --primary: #0A2A3A;
+  --primary-foreground: #FBF9F6;
+  --secondary: #E8DECE;
+  --secondary-foreground: #1C1A18;
+  --muted: #E8DECE;
+  --muted-foreground: #8A7F74;
+  --accent: #d4614a;
+  --accent-foreground: #FBF9F6;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #D4C9B8;
+  --input: #E8DECE;
+  --ring: #d4614a;
+  --radius: 0.25rem;
+
+  /* Sidebar (unused but required) */
+  --sidebar: #F7F3EE;
+  --sidebar-foreground: #1C1A18;
+  --sidebar-primary: #0A2A3A;
+  --sidebar-primary-foreground: #FBF9F6;
+  --sidebar-accent: #E8DECE;
+  --sidebar-accent-foreground: #1C1A18;
+  --sidebar-border: #D4C9B8;
+  --sidebar-ring: #d4614a;
+
+  /* Typography */
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-jost);
+
+  /* Spacing rhythm */
+  --section-py: 7rem;
+  --section-py-sm: 4rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
+  --color-navy-light: var(--navy-light);
+  --color-cream: var(--cream);
+  --color-warm-white: var(--warm-white);
+  --color-sand: var(--sand);
+  --color-linen: var(--linen);
+  --color-charcoal: var(--charcoal);
+  --color-muted-rose: var(--muted-rose);
+  --color-warm-gray: var(--warm-gray);
+  --color-deep-warm: var(--deep-warm);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base Styles ─── */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+    font-family: var(--font-body), sans-serif;
+  }
+
+  body {
+    @apply bg-warm-white text-charcoal antialiased;
+    font-family: var(--font-body), sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--terracotta);
+    color: var(--warm-white);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Typography Utilities ─── */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), sans-serif;
+  }
+
+  .tracking-widest-xl {
+    letter-spacing: 0.25em;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
 }
+
+/* ─── Textile Pattern SVG (herringbone weave) — used as background & dividers ─── */
+@layer utilities {
+  .textile-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230A2A3A' fill-opacity='0.04'%3E%3Cpath d='M0 0h4v4H0zm8 0h4v4H8zm-4 4h4v4H4zm8 0h4v4h-4zm-8 8h4v4H4zm8 0h4v4h-4zm-4-4h4v4H8zm8 0h4v4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .textile-bg-light {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230A2A3A' fill-opacity='0.025'%3E%3Cpath d='M0 0h4v4H0zm8 0h4v4H8zm-4 4h4v4H4zm8 0h4v4h-4zm-8 8h4v4H4zm8 0h4v4h-4zm-4-4h4v4H8zm8 0h4v4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .textile-bg-cream {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4614a' fill-opacity='0.04'%3E%3Cpath d='M0 0h4v4H0zm8 0h4v4H8zm-4 4h4v4H4zm8 0h4v4h-4zm-8 8h4v4H4zm8 0h4v4h-4zm-4-4h4v4H8zm8 0h4v4h-4z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* ─── Hide scrollbar utility (used in horizontal scroll strips) ─── */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--linen); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--warm-gray); }

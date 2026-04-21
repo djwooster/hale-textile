@@ -1,0 +1,198 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import PageHero from "@/components/shared/PageHero";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import TextileDivider from "@/components/shared/TextileDivider";
+import TextileMotif from "@/components/shared/TextileMotif";
+
+const reasons = [
+  "Fabric enquiry",
+  "Custom accessory",
+  "Partner / trade account",
+  "General question",
+  "Book a studio visit",
+];
+
+export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  return (
+    <>
+      <PageHero
+        eyebrow="Get in Touch"
+        headline="Visit Us"
+        subheadline="We&apos;d love to hear from you. Come by the studio, send a note, or just ask about a fabric."
+      />
+
+      <section className="py-16 lg:py-24 bg-warm-white">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+            {/* Info column */}
+            <AnimatedSection>
+              <div className="sticky top-28">
+                <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-8">
+                  Studio Details
+                </p>
+
+                {/* Address */}
+                <div className="mb-10">
+                  <p className="font-display text-2xl font-light text-navy mb-3">Address</p>
+                  <address className="not-italic font-body text-sm font-light text-warm-gray leading-relaxed">
+                    <p>142 Weavers Lane</p>
+                    <p>San Francisco, CA 94103</p>
+                  </address>
+                </div>
+
+                <TextileDivider className="mb-10" />
+
+                {/* Hours */}
+                <div className="mb-10">
+                  <p className="font-display text-2xl font-light text-navy mb-3">Hours</p>
+                  <dl className="font-body text-sm font-light text-warm-gray space-y-1.5">
+                    <div className="flex justify-between">
+                      <dt>Tuesday – Friday</dt>
+                      <dd>10am – 5pm</dd>
+                    </div>
+                    <div className="flex justify-between">
+                      <dt>Saturday</dt>
+                      <dd>10am – 3pm</dd>
+                    </div>
+                    <div className="flex justify-between text-linen">
+                      <dt>Sunday – Monday</dt>
+                      <dd>Closed</dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <TextileDivider className="mb-10" />
+
+                {/* Contact */}
+                <div className="mb-12">
+                  <p className="font-display text-2xl font-light text-navy mb-3">Contact</p>
+                  <p className="font-body text-sm font-light text-warm-gray mb-1">
+                    Email:{" "}
+                    <a href="mailto:hello@hale-textile.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
+                      hello@hale-textile.com
+                    </a>
+                  </p>
+                  <p className="font-body text-sm font-light text-warm-gray">
+                    Phone:{" "}
+                    <a href="tel:+14155550192" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
+                      (415) 555-0192
+                    </a>
+                  </p>
+                </div>
+
+                {/* Decorative motif */}
+                <div className="opacity-10">
+                  <TextileMotif size={120} color="#0A2A3A" />
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Form column */}
+            <AnimatedSection delay={0.15}>
+              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-8">
+                Send a Message
+              </p>
+
+              {!submitted ? (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        placeholder="Jane"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        placeholder="Doe"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                      placeholder="jane@studio.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
+                      Reason for Contact
+                    </label>
+                    <select className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 appearance-none cursor-pointer">
+                      <option value="">Select one…</option>
+                      {reasons.map((r) => (
+                        <option key={r} value={r}>{r}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      rows={6}
+                      className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
+                      placeholder="Tell us a little about what you&apos;re working on…"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full sm:w-auto bg-navy text-warm-white font-body text-[10px] tracking-[0.25em] uppercase font-medium px-10 py-4 hover:bg-navy-mid transition-colors duration-300"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+                  className="border border-linen p-12 text-center"
+                >
+                  <div className="opacity-20 mb-6 flex justify-center">
+                    <TextileMotif size={80} color="#d4614a" />
+                  </div>
+                  <p className="font-display text-3xl font-light text-navy mb-3">
+                    Thank you.
+                  </p>
+                  <p className="font-body text-sm font-light text-warm-gray">
+                    We&apos;ll be in touch soon. In the meantime, feel free to
+                    browse the library.
+                  </p>
+                </motion.div>
+              )}
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
