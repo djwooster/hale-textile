@@ -8,10 +8,10 @@ import TextileDivider from "@/components/shared/TextileDivider";
 const gridItems = [
   {
     id: 1,
-    label: "Jacquard Weaves",
+    label: "Drapery & Upholstery",
     description: "Intricate patterns woven directly into the cloth.",
     span: "lg:col-span-2 lg:row-span-2",
-    image: "/images/fabric-01.jpg",
+    image: "/images/Wanderlust-OrleansFAB-skyblue-CoronadoEmbroidery-green-300RGB.jpg",
     placeholder: "bg-navy/80",
   },
   {
@@ -19,7 +19,7 @@ const gridItems = [
     label: "Linen & Natural",
     description: "Honest texture, enduring character.",
     span: "",
-    image: "/images/fabric-02.jpg",
+    image: "/images/Islander-CanaryTrellis-coral-detail_300RGB.jpg",
     placeholder: "bg-terracotta/70",
   },
   {
@@ -27,15 +27,15 @@ const gridItems = [
     label: "Tapestry Collection",
     description: "Heritage patterns reinterpreted.",
     span: "",
-    image: "/images/fabric-03.jpg",
+    image: "/images/Wanderlust-AlberoWP-tangerine&turquoise-detail-300RGB.jpg",
     placeholder: "bg-sand",
   },
   {
     id: 4,
     label: "Studio Originals",
     description: "Designed and woven exclusively at Hale.",
-    span: "lg:col-span-2",
-    image: "/images/fabric-04.jpg",
+    span: "lg:col-span-3",
+    image: "/images/Islander-UndertheSea-turquoise&plum-detail_300RGB.jpg",
     placeholder: "bg-linen",
   },
 ];
@@ -54,7 +54,7 @@ export default function EditorialGrid() {
             </h2>
           </div>
           <div className="max-w-sm">
-            <p className="font-body text-sm font-light text-warm-gray leading-relaxed">
+            <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed">
               An ever-growing collection of premium textiles — each one chosen for
               its hand, weight, and story.
             </p>

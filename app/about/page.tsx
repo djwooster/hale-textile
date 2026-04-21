@@ -58,7 +58,7 @@ export default function AboutPage() {
                   A studio built on the
                   <span className="italic text-terracotta"> belief that cloth matters</span>.
                 </h2>
-                <div className="space-y-5 font-body text-sm font-light text-warm-gray leading-relaxed max-w-2xl">
+                <div className="space-y-5 font-body text-[18px] font-light text-warm-gray leading-relaxed max-w-2xl">
                   <p>
                     Hale Textile Studio was born from years spent searching for
                     fabric that was truly worth using. Not fabric that was
@@ -127,12 +127,12 @@ export default function AboutPage() {
               }}
             />
             <AnimatedSection delay={0.2}>
-              <p className="font-body text-sm font-light text-warm-gray leading-relaxed mb-6">
+              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed mb-6">
                 Our studio is open to visitors by appointment and during regular
                 walk-in hours. We love meeting the people who will ultimately live
                 with these fabrics.
               </p>
-              <address className="not-italic font-body text-sm font-light text-charcoal leading-relaxed mb-8">
+              <address className="not-italic font-body text-[18px] font-light text-charcoal leading-relaxed mb-8">
                 <p className="font-medium text-navy">Hale Textile Studio</p>
                 <p>142 Weavers Lane</p>
                 <p>San Francisco, CA 94103</p>

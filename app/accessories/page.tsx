@@ -16,7 +16,7 @@ const accessories = [
       "Numbered · Named · Collectible",
     ],
     placeholder: "bg-sand",
-    image: "/images/acc-tote.jpg",
+    image: "/images/coral linen (1).jpg",
     featured: true,
   },
   {
@@ -30,7 +30,7 @@ const accessories = [
       "Zipper or envelope back",
     ],
     placeholder: "bg-muted-rose",
-    image: "/images/acc-pillows.jpg",
+    image: "/images/Island_colorseries1_water_300RGB.jpg",
   },
   {
     name: "Table Runners",
@@ -43,7 +43,7 @@ const accessories = [
       "Matching napkin sets",
     ],
     placeholder: "bg-linen",
-    image: "/images/acc-runners.jpg",
+    image: "/images/Soleil-ProteaPrint-pool-Bistro-aqua-Calista-mandarin_300RGB.jpg",
   },
   {
     name: "Coverlet & Quilt",
@@ -56,7 +56,7 @@ const accessories = [
       "Heirloom quality",
     ],
     placeholder: "bg-navy/20",
-    image: "/images/acc-coverlet.jpg",
+    image: "/images/Soleil-ProteaPrint-pool-detail_300RGB.jpg",
   },
   {
     name: "Duvet Covers",
@@ -69,7 +69,7 @@ const accessories = [
       "Monogram available",
     ],
     placeholder: "bg-cream",
-    image: "/images/acc-duvet.jpg",
+    image: "/images/PACIFIC_72J9301-02 (1).jpg",
   },
   {
     name: "Furoshiki Gift Bags",
@@ -82,7 +82,7 @@ const accessories = [
       "Perfect for gifting",
     ],
     placeholder: "bg-terracotta/20",
-    image: "/images/acc-furoshiki.jpg",
+    image: "/images/DSC_9075 (1).jpg",
   },
   {
     name: "Placemats & Napkins",
@@ -95,7 +95,7 @@ const accessories = [
       "Monogram available",
     ],
     placeholder: "bg-sand",
-    image: "/images/acc-placemats.jpg",
+    image: "/images/DSC_9066_no tags (1).jpg",
   },
   {
     name: "Lavender Sachets",
@@ -108,7 +108,7 @@ const accessories = [
       "Custom quantities",
     ],
     placeholder: "bg-muted-rose",
-    image: "/images/acc-sachets.jpg",
+    image: "/images/CIVIC_17J7891-01 (1).jpg",
   },
 ];
 

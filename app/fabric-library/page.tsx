@@ -10,15 +10,15 @@ import MailingList from "@/components/home/MailingList";
 const categories = ["All", "Jacquard", "Linen", "Tapestry", "Velvet", "Wool", "Cotton", "Studio Originals"];
 
 const fabrics = [
-  { id: 1, name: "Indigo Herringbone", category: "Jacquard", weight: "Upholstery", origin: "Belgium", image: "/images/fabric-01.jpg", placeholder: "bg-navy/80" },
-  { id: 2, name: "Raw Linen Natural", category: "Linen", weight: "Medium", origin: "France", image: "/images/fabric-02.jpg", placeholder: "bg-sand" },
-  { id: 3, name: "Amber Tapestry Weave", category: "Tapestry", weight: "Heavy", origin: "Portugal", image: "/images/fabric-03.jpg", placeholder: "bg-terracotta/60" },
-  { id: 4, name: "Sage Bouclé", category: "Wool", weight: "Medium", origin: "Scotland", image: "/images/fabric-05.jpg", placeholder: "bg-linen" },
-  { id: 5, name: "Midnight Velvet", category: "Velvet", weight: "Upholstery", origin: "Italy", image: "/images/fabric-06.jpg", placeholder: "bg-navy-mid" },
-  { id: 6, name: "Bone Slubbed Cotton", category: "Cotton", weight: "Light", origin: "Japan", image: "/images/fabric-07.jpg", placeholder: "bg-muted-rose" },
-  { id: 7, name: "Hale Original No. 4", category: "Studio Originals", weight: "Drapery", origin: "In Studio", image: "/images/fabric-08.jpg", placeholder: "bg-deep-warm/40" },
-  { id: 8, name: "Terracotta Dobby", category: "Cotton", weight: "Medium", origin: "India", image: "/images/fabric-09.jpg", placeholder: "bg-terracotta/40" },
-  { id: 9, name: "Ivory Damask", category: "Jacquard", weight: "Drapery", origin: "Belgium", image: "/images/fabric-10.jpg", placeholder: "bg-cream" },
+  { id: 1, name: "Indigo Herringbone", category: "Jacquard", weight: "Upholstery", origin: "Belgium", image: "/images/Wanderlust-TivoliWP-skyblue-SolsburyFAB-sunshineyellow-1-300RGB.jpg", placeholder: "bg-navy/80" },
+  { id: 2, name: "Raw Linen Natural", category: "Linen", weight: "Medium", origin: "France", image: "/images/Wanderlust-MangroveTreeFAB-green&white-SolsburyFAB-green-RailwayStripeWP-green-300RGB.jpg", placeholder: "bg-sand" },
+  { id: 3, name: "Amber Tapestry Weave", category: "Tapestry", weight: "Heavy", origin: "Portugal", image: "/images/embrodiery_800 (1).jpg", placeholder: "bg-terracotta/60" },
+  { id: 4, name: "Sage Bouclé", category: "Wool", weight: "Medium", origin: "Scotland", image: "/images/Veranda Sunbrella - 7 (1).jpg", placeholder: "bg-linen" },
+  { id: 5, name: "Midnight Velvet", category: "Velvet", weight: "Upholstery", origin: "Italy", image: "/images/banner_4 (1).jpg", placeholder: "bg-navy-mid" },
+  { id: 6, name: "Bone Slubbed Cotton", category: "Cotton", weight: "Light", origin: "Japan", image: "/images/DSC_9142 (1).jpg", placeholder: "bg-muted-rose" },
+  { id: 7, name: "Hale Original No. 4", category: "Studio Originals", weight: "Drapery", origin: "In Studio", image: "/images/banner_1 (1).jpg", placeholder: "bg-deep-warm/40" },
+  { id: 8, name: "Terracotta Dobby", category: "Cotton", weight: "Medium", origin: "India", image: "/images/CASTAWAY_66J9301-02 (1).jpg", placeholder: "bg-terracotta/40" },
+  { id: 9, name: "Ivory Damask", category: "Jacquard", weight: "Drapery", origin: "Belgium", image: "/images/DSC_9094 (1).jpg", placeholder: "bg-cream" },
 ];
 
 export default function FabricLibraryPage() {
@@ -112,7 +112,7 @@ export default function FabricLibraryPage() {
                 <h3 className="font-display text-3xl lg:text-4xl font-light text-navy">
                   We source on request.
                 </h3>
-                <p className="font-body text-sm font-light text-warm-gray mt-2 max-w-md">
+                <p className="font-body text-[18px] font-light text-warm-gray mt-2 max-w-md">
                   Our library is only a fraction of what we can access. Tell us what you&apos;re looking for.
                 </p>
               </div>

@@ -27,13 +27,13 @@ export default function AboutTeaser() {
               Where cloth becomes
               <span className="italic text-terracotta-light"> something more</span>.
             </h2>
-            <p className="font-body text-sm font-light text-linen leading-relaxed mb-6">
+            <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-6">
               Hale Textile Studio was founded on a simple belief: that the right
               fabric can transform a space, an object, or a garment into something
               deeply personal. We curate and create textiles that carry history,
               intention, and beauty.
             </p>
-            <p className="font-body text-sm font-light text-linen leading-relaxed mb-10">
+            <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-10">
               Our studio is open to designers, collectors, and anyone who believes
               that the materials around us matter.
             </p>
@@ -54,9 +54,9 @@ export default function AboutTeaser() {
               <div
                 className="aspect-[4/5] bg-navy-mid relative overflow-hidden"
                 style={{
-                  backgroundImage: "url('/images/about-teaser.jpg')",
+                  backgroundImage: "url('/images/HomepageSection3-1 (1).jpg')",
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: "20% center",
                 }}
               >
                 <div className="absolute inset-0 bg-navy/20" />

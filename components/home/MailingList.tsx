@@ -38,7 +38,7 @@ export default function MailingList() {
               <br />
               <span className="italic">stories & studio notes</span>.
             </h2>
-            <p className="font-body text-sm font-light text-warm-white/75 leading-relaxed mb-10">
+            <p className="font-body text-[18px] font-light text-warm-white/75 leading-relaxed mb-10">
               Join the Hale circle. Be the first to know about new fabric arrivals,
               limited accessory drops, and studio events.
             </p>
@@ -51,7 +51,7 @@ export default function MailingList() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="flex-1 bg-warm-white/10 border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 font-body text-sm px-5 py-4 outline-none focus:border-warm-white/70 transition-colors duration-300"
+                  className="flex-1 bg-warm-white/10 border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 font-body text-[18px] px-5 py-4 outline-none focus:border-warm-white/70 transition-colors duration-300"
                 />
                 <button
                   type="submit"

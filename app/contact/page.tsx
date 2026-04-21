@@ -44,7 +44,7 @@ export default function ContactPage() {
                 {/* Address */}
                 <div className="mb-10">
                   <p className="font-display text-2xl font-light text-navy mb-3">Address</p>
-                  <address className="not-italic font-body text-sm font-light text-warm-gray leading-relaxed">
+                  <address className="not-italic font-body text-[18px] font-light text-warm-gray leading-relaxed">
                     <p>142 Weavers Lane</p>
                     <p>San Francisco, CA 94103</p>
                   </address>
@@ -55,7 +55,7 @@ export default function ContactPage() {
                 {/* Hours */}
                 <div className="mb-10">
                   <p className="font-display text-2xl font-light text-navy mb-3">Hours</p>
-                  <dl className="font-body text-sm font-light text-warm-gray space-y-1.5">
+                  <dl className="font-body text-[18px] font-light text-warm-gray space-y-1.5">
                     <div className="flex justify-between">
                       <dt>Tuesday – Friday</dt>
                       <dd>10am – 5pm</dd>
@@ -76,13 +76,13 @@ export default function ContactPage() {
                 {/* Contact */}
                 <div className="mb-12">
                   <p className="font-display text-2xl font-light text-navy mb-3">Contact</p>
-                  <p className="font-body text-sm font-light text-warm-gray mb-1">
+                  <p className="font-body text-[18px] font-light text-warm-gray mb-1">
                     Email:{" "}
                     <a href="mailto:hello@hale-textile.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
                       hello@hale-textile.com
                     </a>
                   </p>
-                  <p className="font-body text-sm font-light text-warm-gray">
+                  <p className="font-body text-[18px] font-light text-warm-gray">
                     Phone:{" "}
                     <a href="tel:+14155550192" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
                       (415) 555-0192
@@ -112,7 +112,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                         placeholder="Jane"
                       />
                     </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                         placeholder="Doe"
                       />
                     </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
-                      className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                      className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                       placeholder="jane@studio.com"
                     />
                   </div>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                     <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
                       Reason for Contact
                     </label>
-                    <select className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 appearance-none cursor-pointer">
+                    <select className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 appearance-none cursor-pointer">
                       <option value="">Select one…</option>
                       {reasons.map((r) => (
                         <option key={r} value={r}>{r}</option>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       rows={6}
-                      className="w-full border border-linen bg-transparent font-body text-sm text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
+                      className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
                       placeholder="Tell us a little about what you&apos;re working on…"
                     />
                   </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   <p className="font-display text-3xl font-light text-navy mb-3">
                     Thank you.
                   </p>
-                  <p className="font-body text-sm font-light text-warm-gray">
+                  <p className="font-body text-[18px] font-light text-warm-gray">
                     We&apos;ll be in touch soon. In the meantime, feel free to
                     browse the library.
                   </p>

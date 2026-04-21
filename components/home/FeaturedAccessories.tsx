@@ -16,14 +16,14 @@ const featured = [
     name: "Custom Throw Pillows",
     from: "From $85",
     tag: "Made to Order",
-    image: "/images/acc-pillows.jpg",
+    image: "/images/Island_colorseries1_water_300RGB.jpg",
     placeholder: "bg-muted-rose",
   },
   {
     name: "Coverlet & Quilt",
     from: "From $285",
     tag: "Made to Order",
-    image: "/images/acc-coverlet.jpg",
+    image: "/images/Soleil-ProteaPrint-pool-detail_300RGB.jpg",
     placeholder: "bg-linen",
   },
 ];

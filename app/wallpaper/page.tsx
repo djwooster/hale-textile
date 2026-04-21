@@ -71,16 +71,28 @@ const categories = [
 
 const galleryImages = [
   {
-    src: "/section/LacinatoWP&FAB_mineral_300RGB.jpg",
-    alt: "Lacinato botanical wallpaper in mineral",
+    src: "/images/Islander-RainforestMural-tropical_300RGB.jpg",
+    alt: "Rainforest Mural wallpaper — tropical botanical panorama",
   },
   {
-    src: "/section/Wanderlust-TivoliWP-skyblue-SolsburyFAB-sunshineyellow-1-300RGB.jpg",
-    alt: "Tivoli wallpaper in sky blue",
+    src: "/images/Islander-BatikFish-coral&blue_300RGB.jpg",
+    alt: "Batik Fish wallpaper in coral and blue — poolside room",
   },
   {
-    src: "/section/Wanderlust-MangroveTreeFAB-green&white-SolsburyFAB-green-RailwayStripeWP-green-300RGB.jpg",
-    alt: "Mangrove Tree and Railway Stripe wallpaper in green",
+    src: "/images/Islander-StKitts-brown_300RGB.jpg",
+    alt: "St Kitts wallpaper in brown — jungle silhouette bar setting",
+  },
+  {
+    src: "/images/Islander-CanaryTrellis-coral-detail_300RGB.jpg",
+    alt: "Canary Trellis wallpaper detail in coral",
+  },
+  {
+    src: "/images/Islander-UndertheSea-turquoise&plum-detail_300RGB.jpg",
+    alt: "Under the Sea wallpaper in turquoise and plum",
+  },
+  {
+    src: "/images/Wanderlust-AlberoWP-tangerine&turquoise-detail-300RGB.jpg",
+    alt: "Albero wallpaper detail in tangerine and turquoise",
   },
 ];
 
@@ -98,7 +110,7 @@ export default function WallpaperPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <AnimatedSection>
-              <p className="font-body text-sm font-light text-warm-gray leading-relaxed mb-8">
+              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed mb-8">
                 Our studio has every wallpaper sample on display in context. You
                 can see how it reads in the light. You can feel the texture. You
                 can imagine it in your home.
@@ -133,9 +145,9 @@ export default function WallpaperPage() {
         </div>
       </section>
 
-      {/* Gallery strip */}
+      {/* Gallery */}
       <section className="bg-linen">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-px">
           {galleryImages.map((img, i) => (
             <AnimatedSection key={i} delay={i * 0.1} className="overflow-hidden">
               <div className="relative aspect-[4/3] group overflow-hidden">
@@ -222,7 +234,7 @@ export default function WallpaperPage() {
                 Every sample is on display
                 <span className="italic text-terracotta-light"> in context</span>.
               </h2>
-              <p className="font-body text-sm font-light text-linen leading-relaxed mb-10 max-w-lg">
+              <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-10 max-w-lg">
                 Wallpaper is one of the few materials that must be experienced
                 before you commit. Come to the studio — see how each pattern reads
                 at scale, how the texture catches light, how the room changes.

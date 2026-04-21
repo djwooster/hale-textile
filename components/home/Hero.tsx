@@ -61,7 +61,7 @@ export default function Hero() {
 
       {/* Hero content */}
       <div className="relative z-10 px-6 lg:px-12 pt-32 lg:pt-36 max-w-screen-xl mx-auto w-full">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden pb-4">
           <motion.h1
             className="font-display text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[8rem] font-light text-warm-white leading-[0.95] tracking-tight text-shadow-hero"
             initial={{ y: "100%" }}

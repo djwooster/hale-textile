@@ -73,12 +73,12 @@ export default function PartnerProgramPage() {
                 <br />
                 <span className="italic text-terracotta">the people who use it</span>.
               </h2>
-              <p className="font-body text-sm font-light text-warm-gray leading-relaxed mb-5">
+              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed mb-5">
                 Our trade program gives designers and firms direct access to the
                 full Hale library at preferred pricing, with the personal
                 relationship that makes projects go smoothly.
               </p>
-              <p className="font-body text-sm font-light text-warm-gray leading-relaxed">
+              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed">
                 We believe the best work happens when the designer and the material
                 source are truly aligned. That&apos;s the foundation of every partner
                 relationship we build.
@@ -166,7 +166,7 @@ export default function PartnerProgramPage() {
                 <p className="font-display text-6xl font-light text-linen mb-4">{p.step}</p>
                 <h3 className="font-display text-2xl font-light text-navy mb-3">{p.title}</h3>
                 <p
-                  className="font-body text-sm font-light text-warm-gray leading-relaxed"
+                  className="font-body text-[18px] font-light text-warm-gray leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: p.body }}
                 />
               </AnimatedSection>
