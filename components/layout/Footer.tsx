@@ -4,6 +4,7 @@ import TextileDivider from "@/components/shared/TextileDivider";
 
 const shop = [
   { href: "/fabric-library", label: "Fabric Library" },
+  { href: "/wallpaper", label: "Wallpaper" },
   { href: "/accessories", label: "Accessories" },
 ];
 

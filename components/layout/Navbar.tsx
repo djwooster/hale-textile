@@ -9,6 +9,7 @@ import MobileMenu from "./MobileMenu";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/fabric-library", label: "Fabric Library" },
+  { href: "/wallpaper", label: "Wallpaper" },
   { href: "/accessories", label: "Accessories" },
   { href: "/partner-program", label: "Partner Program" },
   { href: "/about", label: "About" },

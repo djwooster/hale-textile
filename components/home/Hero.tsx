@@ -29,15 +29,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-start overflow-hidden">
       {/* Background image placeholder */}
       <div className="absolute inset-0 bg-navy">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero-image-new.jpg')" }}
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/20" />
+        {/* Gradient overlay — top-down to keep bottom focal point clear */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/30 to-transparent" />
         {/* Textile texture */}
         <div className="absolute inset-0 textile-bg opacity-20" />
       </div>
@@ -60,19 +60,10 @@ export default function Hero() {
       </motion.div>
 
       {/* Hero content */}
-      <div className="relative z-10 px-6 lg:px-12 pb-16 lg:pb-24 max-w-screen-xl mx-auto w-full">
-        <motion.p
-          className="font-body text-[10px] tracking-[0.4em] uppercase text-terracotta-light mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-        >
-          Hale Textile Studio
-        </motion.p>
-
+      <div className="relative z-10 px-6 lg:px-12 pt-32 lg:pt-36 max-w-screen-xl mx-auto w-full">
         <div className="overflow-hidden">
           <motion.h1
-            className="font-display text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[8rem] font-light text-warm-white leading-[0.95] tracking-tight"
+            className="font-display text-5xl md:text-7xl lg:text-[6.5rem] xl:text-[8rem] font-light text-warm-white leading-[0.95] tracking-tight text-shadow-hero"
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.0, delay: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -92,7 +83,7 @@ export default function Hero() {
         </div>
 
         <motion.p
-          className="mt-8 font-body text-base lg:text-lg font-light text-warm-white/70 max-w-lg leading-relaxed"
+          className="mt-8 font-body text-base lg:text-lg font-light text-warm-white max-w-lg leading-relaxed text-shadow-hero"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
@@ -118,7 +109,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 border border-warm-white/40 text-warm-white font-body text-[11px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-warm-white/80 transition-colors duration-300"
+            className="inline-flex items-center gap-3 border border-warm-white/40 text-warm-white font-body text-[11px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-warm-white/70 transition-all duration-300 bg-white/10 backdrop-blur-sm hover:bg-white/15"
           >
             Visit Us
           </Link>
