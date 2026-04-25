@@ -45,30 +45,9 @@ export default function ContactPage() {
                 <div className="mb-10">
                   <p className="font-display text-2xl font-light text-navy mb-3">Address</p>
                   <address className="not-italic font-body text-[18px] font-light text-warm-gray leading-relaxed">
-                    <p>142 Weavers Lane</p>
-                    <p>San Francisco, CA 94103</p>
+                    <p>1050 Queen Street #100</p>
+                    <p>Honolulu, HI 96814</p>
                   </address>
-                </div>
-
-                <TextileDivider className="mb-10" />
-
-                {/* Hours */}
-                <div className="mb-10">
-                  <p className="font-display text-2xl font-light text-navy mb-3">Hours</p>
-                  <dl className="font-body text-[18px] font-light text-warm-gray space-y-1.5">
-                    <div className="flex justify-between">
-                      <dt>Tuesday – Friday</dt>
-                      <dd>10am – 5pm</dd>
-                    </div>
-                    <div className="flex justify-between">
-                      <dt>Saturday</dt>
-                      <dd>10am – 3pm</dd>
-                    </div>
-                    <div className="flex justify-between text-linen">
-                      <dt>Sunday – Monday</dt>
-                      <dd>Closed</dd>
-                    </div>
-                  </dl>
                 </div>
 
                 <TextileDivider className="mb-10" />
@@ -78,14 +57,14 @@ export default function ContactPage() {
                   <p className="font-display text-2xl font-light text-navy mb-3">Contact</p>
                   <p className="font-body text-[18px] font-light text-warm-gray mb-1">
                     Email:{" "}
-                    <a href="mailto:hello@hale-textile.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
-                      hello@hale-textile.com
+                    <a href="mailto:meeta@haletextilestudio.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
+                      meeta@haletextilestudio.com
                     </a>
                   </p>
                   <p className="font-body text-[18px] font-light text-warm-gray">
                     Phone:{" "}
-                    <a href="tel:+14155550192" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
-                      (415) 555-0192
+                    <a href="tel:+18082015900" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
+                      808-201-5900
                     </a>
                   </p>
                 </div>

@@ -9,6 +9,62 @@ import MailingList from "@/components/home/MailingList";
 
 const categories = ["All", "Jacquard", "Linen", "Tapestry", "Velvet", "Wool", "Cotton", "Studio Originals"];
 
+const fabricAndTextile = [
+  {
+    family: "Kravet Family",
+    brands: [
+      { name: "Kravet", specialties: "Fabric · Wallcovering · Trim" },
+      { name: "Lee Jofa", specialties: "Fabric · Wallcovering" },
+      { name: "Brunschwig & Fils", specialties: "Fabric · Wallcovering" },
+      { name: "GP & J Baker", specialties: "Fabric · Wallcovering" },
+      { name: "Donghia", specialties: "Fabric · Wallcovering" },
+    ],
+  },
+  {
+    family: "Fabricut Family",
+    brands: [
+      { name: "Fabricut", specialties: "Fabric · Rugs · Wallcovering" },
+      { name: "Clarence House", specialties: "Luxury Fabric · Trim" },
+      { name: "S. Harris", specialties: "Fabric · Wallcovering" },
+      { name: "Stroheim", specialties: "Fabric · Wallcovering" },
+      { name: "Vervain", specialties: "Fabric · Wallcovering" },
+      { name: "Trend", specialties: "Fabric · Wallcovering" },
+    ],
+  },
+  {
+    family: "Independent Lines",
+    brands: [
+      { name: "Schumacher", specialties: "Fabric · Wallcovering · Trim" },
+      { name: "Scalamandré", specialties: "Fabric · Wallcovering · Trim" },
+      { name: "JF Fabrics", specialties: "Fabric · Wallcovering · Rugs" },
+      { name: "Thibaut", specialties: "Fabric · Wallcovering" },
+      { name: "Silver State / Alaxi", specialties: "Performance · Indoor-Outdoor" },
+      { name: "Walfab", specialties: "Indoor-Outdoor Fabric" },
+      { name: "Norbar", specialties: "Fabric" },
+      { name: "Kasmir", specialties: "Fabric · Trimming" },
+    ],
+  },
+];
+
+const wallpaperLines = [
+  { name: "Kravet", specialties: "Wallcovering" },
+  { name: "Lee Jofa", specialties: "Wallcovering" },
+  { name: "Fabricut", specialties: "Wallcovering" },
+  { name: "Schumacher", specialties: "Wallcovering · Murals" },
+  { name: "Scalamandré", specialties: "Specialty Wallcovering" },
+  { name: "Thibaut", specialties: "Wallpaper · Grasscloth" },
+  { name: "JF Fabrics", specialties: "Wallcovering" },
+  { name: "Sanderson / Zoffany", specialties: "Wallpaper · Fabric" },
+];
+
+const furnitureLines = [
+  { name: "Kravet Furniture", specialties: "Upholstered Furniture" },
+  { name: "Palecek", specialties: "Furniture · Lighting · Decor" },
+  { name: "Lexington", specialties: "Furniture · Bedding" },
+  { name: "Arteriors", specialties: "Furniture · Lighting · Decor" },
+  { name: "D.V. Kap", specialties: "Pillows · Accessories" },
+];
+
 const fabrics = [
   { id: 1, name: "Indigo Herringbone", category: "Jacquard", weight: "Upholstery", origin: "Belgium", image: "/images/Wanderlust-TivoliWP-skyblue-SolsburyFAB-sunshineyellow-1-300RGB.jpg", placeholder: "bg-navy/80" },
   { id: 2, name: "Raw Linen Natural", category: "Linen", weight: "Medium", origin: "France", image: "/images/Wanderlust-MangroveTreeFAB-green&white-SolsburyFAB-green-RailwayStripeWP-green-300RGB.jpg", placeholder: "bg-sand" },
@@ -103,7 +159,71 @@ export default function FabricLibraryPage() {
             ))}
           </div>
 
-          <AnimatedSection className="mt-20">
+          <div className="mt-20">
+            <AnimatedSection className="mb-14">
+              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-3">Our Partners</p>
+              <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">Lines We Carry</h2>
+              <p className="font-body text-sm font-light text-warm-gray mt-3 max-w-xl leading-relaxed">
+                We represent the finest fabric houses and design lines, giving you access to an extraordinary breadth of textiles, wallcoverings, and furnishings.
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.1} className="mb-12">
+              <div className="flex items-center gap-4 mb-10">
+                <span className="font-body text-[10px] tracking-[0.35em] uppercase text-navy whitespace-nowrap">Fabric &amp; Textile</span>
+                <div className="flex-1 h-px bg-linen" />
+              </div>
+              {fabricAndTextile.map((group) => (
+                <div key={group.family} className="mb-10">
+                  <p className="font-body text-[9px] tracking-[0.3em] uppercase text-warm-gray mb-5">{group.family}</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4">
+                    {group.brands.map((brand) => (
+                      <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
+                        <p className="font-display text-lg font-light text-navy leading-tight">{brand.name}</p>
+                        <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </AnimatedSection>
+
+            <TextileDivider className="my-12" />
+
+            <AnimatedSection delay={0.15} className="mb-12">
+              <div className="flex items-center gap-4 mb-10">
+                <span className="font-body text-[10px] tracking-[0.35em] uppercase text-navy whitespace-nowrap">Wallpaper &amp; Wall Coverings</span>
+                <div className="flex-1 h-px bg-linen" />
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4">
+                {wallpaperLines.map((brand) => (
+                  <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
+                    <p className="font-display text-lg font-light text-navy leading-tight">{brand.name}</p>
+                    <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+
+            <TextileDivider className="my-12" />
+
+            <AnimatedSection delay={0.2} className="mb-20">
+              <div className="flex items-center gap-4 mb-10">
+                <span className="font-body text-[10px] tracking-[0.35em] uppercase text-navy whitespace-nowrap">Furniture &amp; Accessories</span>
+                <div className="flex-1 h-px bg-linen" />
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4">
+                {furnitureLines.map((brand) => (
+                  <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
+                    <p className="font-display text-lg font-light text-navy leading-tight">{brand.name}</p>
+                    <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection className="mt-0">
             <div className="bg-cream p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               <div>
                 <p className="font-body text-[10px] tracking-[0.3em] uppercase text-terracotta mb-3">

@@ -42,23 +42,6 @@ export default function Hero() {
         <div className="absolute inset-0 textile-bg opacity-20" />
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8, duration: 0.8 }}
-      >
-        <span className="font-body text-[9px] tracking-[0.3em] uppercase text-warm-white/50 [writing-mode:vertical-lr]">
-          Scroll
-        </span>
-        <motion.div
-          className="w-px h-12 bg-warm-white/30 origin-top"
-          animate={{ scaleY: [1, 0.3, 1] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        />
-      </motion.div>
-
       {/* Hero content */}
       <div className="relative z-10 px-6 lg:px-12 pt-32 lg:pt-36 max-w-screen-xl mx-auto w-full">
         <div className="overflow-hidden pb-4">
