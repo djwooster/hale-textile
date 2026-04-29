@@ -6,13 +6,6 @@ import TextileDivider from "@/components/shared/TextileDivider";
 
 const featured = [
   {
-    name: "The Signature Tote",
-    from: "From $125",
-    tag: "Limited Seasonal Drops",
-    image: "/images/acc-tote.jpg",
-    placeholder: "bg-sand",
-  },
-  {
     name: "Custom Throw Pillows",
     from: "From $85",
     tag: "Made to Order",
@@ -55,7 +48,7 @@ export default function FeaturedAccessories() {
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {featured.map((item, i) => (
             <AnimatedSection key={item.name} delay={i * 0.12} direction="up">
               <Link href="/accessories" className="group block">

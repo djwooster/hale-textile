@@ -21,8 +21,8 @@ const fabricAndTextile = [
     family: "Fabricut Family",
     brands: [
       { name: "Fabricut", specialties: "Fabric · Rugs · Wallcovering", href: "https://www.fabricut.com" },
-      { name: "Clarence House", specialties: "Luxury Fabric · Trim", href: "https://www.fabricut.com/clarence-house" },
-      { name: "S. Harris", specialties: "Fabric · Wallcovering", href: "https://www.fabricut.com/s-harris" },
+      { name: "Clarence House", specialties: "Luxury Fabric · Trim", href: "https://clarencehouse.com/" },
+      { name: "S. Harris", specialties: "Fabric · Wallcovering", href: "https://www.fabricut.com/sharris" },
       { name: "Stroheim", specialties: "Fabric · Wallcovering", href: "https://www.fabricut.com/stroheim" },
       { name: "Vervain", specialties: "Fabric · Wallcovering", href: "https://www.fabricut.com/vervain" },
       { name: "Trend", specialties: "Fabric · Wallcovering", href: "https://www.fabricut.com/trend" },
@@ -36,9 +36,9 @@ const fabricAndTextile = [
       { name: "JF Fabrics", specialties: "Fabric · Wallcovering · Rugs", href: "https://www.jffabrics.com" },
       { name: "Thibaut", specialties: "Fabric · Wallcovering", href: "https://www.thibautdesign.com" },
       { name: "Silver State / Alaxi", specialties: "Performance · Indoor-Outdoor", href: "https://www.silverstatetextiles.com" },
-      { name: "Walfab", specialties: "Indoor-Outdoor Fabric", href: "https://www.walfab.com" },
-      { name: "Norbar", specialties: "Fabric", href: "https://www.norbar.com" },
-      { name: "Kasmir", specialties: "Fabric · Trimming", href: "https://www.kasmir.com" },
+      { name: "Walfab", specialties: "Indoor-Outdoor Fabric", href: "https://www.walfab.net/" },
+      { name: "Norbar", specialties: "Fabric", href: "https://www.norbarfabrics.com/" },
+      { name: "Kasmir", specialties: "Fabric · Trimming", href: "https://www.kasmirfabrics.com/" },
     ],
   },
 ];
@@ -51,7 +51,7 @@ const wallpaperLines = [
   { name: "Scalamandré", specialties: "Specialty Wallcovering", href: "https://www.scalamandre.com" },
   { name: "Thibaut", specialties: "Wallpaper · Grasscloth", href: "https://www.thibautdesign.com" },
   { name: "JF Fabrics", specialties: "Wallcovering", href: "https://www.jffabrics.com" },
-  { name: "Sanderson / Zoffany", specialties: "Wallpaper · Fabric", href: "https://www.sanderson-uk.com" },
+  { name: "Sanderson / Zoffany", specialties: "Wallpaper · Fabric", href: "https://zoffany.sandersondesigngroup.com/" },
 ];
 
 const furnitureLines = [
@@ -176,8 +176,8 @@ export default function FabricLibraryPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4">
                   {group.brands.map((brand) => (
                     <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
-                      <a href={brand.href} target="_blank" rel="noopener noreferrer" className="font-display text-lg font-light text-navy leading-tight hover:text-terracotta transition-colors duration-200">{brand.name}</a>
-                      <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                      <a href={brand.href} target="_blank" rel="noopener noreferrer" className="font-display text-xl font-light text-navy leading-tight hover:text-terracotta transition-colors duration-200">{brand.name}</a>
+                      <p className="font-body text-[10px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
                     </div>
                   ))}
                 </div>
@@ -196,7 +196,7 @@ export default function FabricLibraryPage() {
               {wallpaperLines.map((brand) => (
                 <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
                   <p className="font-display text-lg font-light text-navy leading-tight">{brand.name}</p>
-                  <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
                 </div>
               ))}
             </div>
@@ -213,7 +213,7 @@ export default function FabricLibraryPage() {
               {furnitureLines.map((brand) => (
                 <div key={brand.name} className="border-l-2 border-linen pl-3 py-0.5">
                   <p className="font-display text-lg font-light text-navy leading-tight">{brand.name}</p>
-                  <p className="font-body text-[8px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-warm-gray mt-1">{brand.specialties}</p>
                 </div>
               ))}
             </div>

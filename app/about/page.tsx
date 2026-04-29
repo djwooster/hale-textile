@@ -30,7 +30,7 @@ export default function AboutPage() {
               <div
                 className="aspect-[3/4] bg-sand relative overflow-hidden"
                 style={{
-                  backgroundImage: "url('/images/founder.jpg')",
+                  backgroundImage: "url('/meeta-about.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
