@@ -8,10 +8,28 @@ import TextileMotif from "@/components/shared/TextileMotif";
 export default function MailingList() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await res.json();
+    setLoading(false);
+
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      setError(data.error || "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -41,22 +59,29 @@ export default function MailingList() {
             </p>
 
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-0 max-w-md mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  required
-                  className="flex-1 bg-warm-white/10 border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 font-body text-[20px] px-5 py-4 outline-none focus:border-warm-white/70 transition-colors duration-300"
-                />
-                <button
-                  type="submit"
-                  className="bg-navy text-warm-white font-body text-[12px] tracking-[0.25em] uppercase font-medium px-7 py-4 hover:bg-navy-mid transition-colors duration-300 whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <div className="max-w-md mx-auto">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-0">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email address"
+                    required
+                    disabled={loading}
+                    className="flex-1 bg-warm-white/10 border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 font-body text-[20px] px-5 py-4 outline-none focus:border-warm-white/70 transition-colors duration-300 disabled:opacity-50"
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-navy text-warm-white font-body text-[12px] tracking-[0.25em] uppercase font-medium px-7 py-4 hover:bg-navy-mid transition-colors duration-300 whitespace-nowrap disabled:opacity-50"
+                  >
+                    {loading ? "Subscribing..." : "Subscribe"}
+                  </button>
+                </form>
+                {error && (
+                  <p className="mt-3 font-body text-sm text-warm-white/80">{error}</p>
+                )}
+              </div>
             ) : (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
