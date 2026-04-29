@@ -8,17 +8,18 @@ interface Props {
   headline: string;
   subheadline?: string;
   dark?: boolean;
+  slim?: boolean;
 }
 
-export default function PageHero({ eyebrow, headline, subheadline, dark = false }: Props) {
+export default function PageHero({ eyebrow, headline, subheadline, dark = false, slim = false }: Props) {
   return (
     <section
-      className={`pt-36 pb-20 px-6 lg:px-12 ${dark ? "bg-navy textile-bg" : "bg-cream textile-bg-cream"}`}
+      className={`${slim ? "pt-16" : "pt-36"} pb-20 ${dark ? "bg-navy textile-bg" : "bg-cream textile-bg-cream"}`}
     >
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         {eyebrow && (
           <motion.p
-            className={`font-body text-[10px] tracking-[0.35em] uppercase mb-6 ${
+            className={`font-body text-[12px] tracking-[0.35em] uppercase mb-6 ${
               dark ? "text-terracotta" : "text-terracotta"
             }`}
             initial={{ opacity: 0, y: 16 }}
@@ -40,7 +41,7 @@ export default function PageHero({ eyebrow, headline, subheadline, dark = false 
         </motion.h1>
         {subheadline && (
           <motion.p
-            className={`mt-6 font-body text-lg font-light leading-relaxed max-w-2xl ${
+            className={`mt-6 font-body text-[20px] font-light leading-relaxed max-w-2xl ${
               dark ? "text-linen" : "text-warm-gray"
             }`}
             initial={{ opacity: 0, y: 20 }}

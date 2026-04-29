@@ -110,14 +110,14 @@ export default function WallpaperPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <AnimatedSection>
-              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed mb-8">
+              <p className="font-body text-[20px] font-light text-warm-gray leading-relaxed mb-8">
                 Our studio has every wallpaper sample on display in context. You
                 can see how it reads in the light. You can feel the texture. You
                 can imagine it in your home.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-terracotta text-warm-white font-body text-[10px] tracking-[0.25em] uppercase font-medium px-8 py-4 hover:bg-terracotta-dark transition-colors duration-300"
+                className="inline-flex items-center gap-3 bg-terracotta text-warm-white font-body text-[12px] tracking-[0.25em] uppercase font-medium px-8 py-4 hover:bg-terracotta-dark transition-colors duration-300"
               >
                 Book a Wallpaper Consultation
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
@@ -170,7 +170,7 @@ export default function WallpaperPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <AnimatedSection className="mb-14">
             <TextileDivider className="mb-14" />
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-4">
+            <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-4">
               What We Carry
             </p>
             <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">
@@ -203,7 +203,7 @@ export default function WallpaperPage() {
                     {cat.details.map((d) => (
                       <li
                         key={d}
-                        className={`font-body text-[10px] tracking-[0.18em] uppercase flex items-center gap-2 ${
+                        className={`font-body text-[12px] tracking-[0.18em] uppercase flex items-center gap-2 ${
                           cat.accent ? "text-linen" : "text-warm-gray"
                         }`}
                       >
@@ -227,14 +227,14 @@ export default function WallpaperPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-2xl">
             <AnimatedSection>
-              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-6">
+              <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-6">
                 See It In Person
               </p>
               <h2 className="font-display text-4xl lg:text-5xl xl:text-6xl font-light text-warm-white leading-tight mb-6">
                 Every sample is on display
                 <span className="italic text-terracotta-light"> in context</span>.
               </h2>
-              <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-10 max-w-lg">
+              <p className="font-body text-[20px] font-light text-linen leading-relaxed mb-10 max-w-lg">
                 Wallpaper is one of the few materials that must be experienced
                 before you commit. Come to the studio — see how each pattern reads
                 at scale, how the texture catches light, how the room changes.
@@ -242,18 +242,12 @@ export default function WallpaperPage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 bg-terracotta text-warm-white font-body text-[10px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:bg-terracotta-dark transition-colors duration-300"
+                  className="inline-flex items-center gap-3 bg-terracotta text-warm-white font-body text-[12px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:bg-terracotta-dark transition-colors duration-300"
                 >
                   Book a Consultation
                   <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
                     <path d="M0 4h12M9 1l3 3-3 3" stroke="currentColor" strokeWidth="1.2" />
                   </svg>
-                </Link>
-                <Link
-                  href="/partner-program"
-                  className="inline-flex items-center gap-3 border border-warm-white/30 text-warm-white font-body text-[10px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-warm-white/60 transition-colors duration-300"
-                >
-                  Trade Accounts
                 </Link>
               </div>
             </AnimatedSection>

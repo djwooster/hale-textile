@@ -46,7 +46,7 @@ export default function EditorialGrid() {
       <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
         <AnimatedSection className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-4">
+            <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-4">
               The Collection
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy leading-tight">
@@ -54,13 +54,13 @@ export default function EditorialGrid() {
             </h2>
           </div>
           <div className="max-w-sm">
-            <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed">
+            <p className="font-body text-[20px] font-light text-warm-gray leading-relaxed">
               An ever-growing collection of premium textiles — each one chosen for
               its hand, weight, and story.
             </p>
             <Link
               href="/fabric-library"
-              className="inline-flex items-center gap-2 mt-4 font-body text-[10px] tracking-[0.25em] uppercase font-medium text-navy hover:text-terracotta transition-colors duration-300"
+              className="inline-flex items-center gap-2 mt-4 font-body text-[12px] tracking-[0.25em] uppercase font-medium text-navy hover:text-terracotta transition-colors duration-300"
             >
               View full library
               <svg width="14" height="8" viewBox="0 0 14 8" fill="none">

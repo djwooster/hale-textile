@@ -20,26 +20,26 @@ export default function AboutTeaser() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Text */}
           <AnimatedSection>
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-6">
+            <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-6">
               The Studio
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-warm-white leading-tight mb-8">
               Where cloth becomes
               <span className="italic text-terracotta-light"> something more</span>.
             </h2>
-            <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-6">
+            <p className="font-body text-[20px] font-light text-linen leading-relaxed mb-6">
               Hale Textile Studio was founded on a simple belief: that the right
               fabric can transform a space, an object, or a garment into something
               deeply personal. We curate and create textiles that carry history,
               intention, and beauty.
             </p>
-            <p className="font-body text-[18px] font-light text-linen leading-relaxed mb-10">
+            <p className="font-body text-[20px] font-light text-linen leading-relaxed mb-10">
               Our studio is open to designers, collectors, and anyone who believes
               that the materials around us matter.
             </p>
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 border border-terracotta text-terracotta font-body text-[10px] tracking-[0.25em] uppercase font-medium px-7 py-3.5 hover:bg-terracotta hover:text-warm-white transition-all duration-300"
+              className="inline-flex items-center gap-3 border border-terracotta text-terracotta font-body text-[12px] tracking-[0.25em] uppercase font-medium px-7 py-3.5 hover:bg-terracotta hover:text-warm-white transition-all duration-300"
             >
               Our Story
               <svg width="14" height="8" viewBox="0 0 14 8" fill="none">

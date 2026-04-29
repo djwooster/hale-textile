@@ -37,14 +37,14 @@ export default function ContactPage() {
             {/* Info column */}
             <AnimatedSection>
               <div className="sticky top-28">
-                <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-8">
+                <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-8">
                   Studio Details
                 </p>
 
                 {/* Address */}
                 <div className="mb-10">
                   <p className="font-display text-2xl font-light text-navy mb-3">Address</p>
-                  <address className="not-italic font-body text-[18px] font-light text-warm-gray leading-relaxed">
+                  <address className="not-italic font-body text-[20px] font-light text-warm-gray leading-relaxed">
                     <p>1050 Queen Street #100</p>
                     <p>Honolulu, HI 96814</p>
                   </address>
@@ -55,13 +55,13 @@ export default function ContactPage() {
                 {/* Contact */}
                 <div className="mb-12">
                   <p className="font-display text-2xl font-light text-navy mb-3">Contact</p>
-                  <p className="font-body text-[18px] font-light text-warm-gray mb-1">
+                  <p className="font-body text-[20px] font-light text-warm-gray mb-1">
                     Email:{" "}
-                    <a href="mailto:meeta@haletextilestudio.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
-                      meeta@haletextilestudio.com
+                    <a href="mailto:info@haletexttilestudio.com" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
+                      info@haletexttilestudio.com
                     </a>
                   </p>
-                  <p className="font-body text-[18px] font-light text-warm-gray">
+                  <p className="font-body text-[20px] font-light text-warm-gray">
                     Phone:{" "}
                     <a href="tel:+18082015900" className="text-terracotta hover:text-terracotta-dark transition-colors duration-200">
                       808-201-5900
@@ -78,7 +78,7 @@ export default function ContactPage() {
 
             {/* Form column */}
             <AnimatedSection delay={0.15}>
-              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-8">
+              <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-8">
                 Send a Message
               </p>
 
@@ -91,7 +91,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                         placeholder="Jane"
                       />
                     </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                       </label>
                       <input
                         type="text"
-                        className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                        className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                         placeholder="Doe"
                       />
                     </div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
-                      className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
+                      className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200"
                       placeholder="jane@studio.com"
                     />
                   </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     <label className="font-body text-[9px] tracking-[0.25em] uppercase text-warm-gray block mb-2">
                       Reason for Contact
                     </label>
-                    <select className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 appearance-none cursor-pointer">
+                    <select className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 appearance-none cursor-pointer">
                       <option value="">Select one…</option>
                       {reasons.map((r) => (
                         <option key={r} value={r}>{r}</option>
@@ -137,14 +137,14 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       rows={6}
-                      className="w-full border border-linen bg-transparent font-body text-[18px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
+                      className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
                       placeholder="Tell us a little about what you&apos;re working on…"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto bg-navy text-warm-white font-body text-[10px] tracking-[0.25em] uppercase font-medium px-10 py-4 hover:bg-navy-mid transition-colors duration-300"
+                    className="w-full sm:w-auto bg-navy text-warm-white font-body text-[12px] tracking-[0.25em] uppercase font-medium px-10 py-4 hover:bg-navy-mid transition-colors duration-300"
                   >
                     Send Message
                   </button>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                   <p className="font-display text-3xl font-light text-navy mb-3">
                     Thank you.
                   </p>
-                  <p className="font-body text-[18px] font-light text-warm-gray">
+                  <p className="font-body text-[20px] font-light text-warm-gray">
                     We&apos;ll be in touch soon. In the meantime, feel free to
                     browse the library.
                   </p>

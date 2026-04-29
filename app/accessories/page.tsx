@@ -115,10 +115,24 @@ const accessories = [
 export default function AccessoriesPage() {
   return (
     <>
+      {/* Coming Soon Banner */}
+      <div className="bg-terracotta relative overflow-hidden pt-16 lg:pt-20">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+          <p className="font-body text-[12px] tracking-[0.15em] uppercase font-semibold text-warm-white">Coming Soon</p>
+          <span className="w-px h-4 bg-warm-white/40 hidden sm:block" />
+          <p className="font-body text-base font-light text-warm-white">
+            Our accessories collection is being prepared —{" "}
+            <a href="#mailing-list" className="underline underline-offset-2 hover:text-warm-white/80 transition-colors duration-200">sign up</a>
+            {" "}to be notified when it launches.
+          </p>
+        </div>
+      </div>
+
       <PageHero
         eyebrow="Made from the Library"
         headline="Accessories"
         subheadline="Everything is made from fabric in our library. You choose the cloth — we make it beautiful. Each piece is crafted to order in our studio."
+        slim
       />
 
       <section className="py-16 lg:py-24 bg-warm-white">
@@ -158,7 +172,7 @@ export default function AccessoriesPage() {
                       {item.details.map((d) => (
                         <li
                           key={d}
-                          className="font-body text-[10px] tracking-[0.18em] uppercase text-warm-gray flex items-center gap-2"
+                          className="font-body text-[12px] tracking-[0.18em] uppercase text-warm-gray flex items-center gap-2"
                         >
                           <span className="w-1 h-1 rounded-full bg-terracotta flex-shrink-0" />
                           {d}
@@ -171,7 +185,7 @@ export default function AccessoriesPage() {
             ))}
 
             {/* Custom Order CTA card */}
-            <AnimatedSection delay={0.5} className="bg-navy group">
+            <AnimatedSection delay={0.5} className="bg-navy group lg:col-span-3">
               <div className="p-8 lg:p-10 h-full flex flex-col justify-between min-h-[320px] relative overflow-hidden">
                 <div className="absolute inset-0 textile-bg opacity-20" />
                 <div className="relative z-10">
@@ -181,14 +195,14 @@ export default function AccessoriesPage() {
                   <h3 className="font-display text-3xl font-light text-warm-white mb-4">
                     Custom Order
                   </h3>
-                  <p className="font-body text-xs font-light text-linen leading-relaxed">
+                  <p className="font-body text-[20px] font-light text-linen leading-relaxed">
                     Don&apos;t see what you need? We make almost anything from our
                     fabric library. Visit the studio to discuss.
                   </p>
                 </div>
                 <Link
                   href="/contact"
-                  className="relative z-10 inline-flex items-center gap-3 border border-terracotta text-terracotta font-body text-[10px] tracking-[0.25em] uppercase font-medium px-6 py-3 hover:bg-terracotta hover:text-warm-white transition-all duration-300 self-start mt-8"
+                  className="relative z-10 inline-flex items-center gap-3 border border-terracotta text-terracotta font-body text-[12px] tracking-[0.25em] uppercase font-medium px-6 py-3 hover:bg-terracotta hover:text-warm-white transition-all duration-300 self-start mt-8"
                 >
                   Visit the Studio
                   <svg width="14" height="8" viewBox="0 0 14 8" fill="none">

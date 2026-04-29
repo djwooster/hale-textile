@@ -42,7 +42,7 @@ export default function StudioGrid() {
     <section className="py-16 lg:py-24 bg-cream overflow-hidden">
       {/* Header */}
       <AnimatedSection className="text-center mb-10 px-6">
-        <p className="font-body text-[10px] tracking-[0.35em] uppercase text-warm-gray mb-4">
+        <p className="font-body text-[12px] tracking-[0.35em] uppercase text-warm-gray mb-4">
           Follow Along
         </p>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy">
@@ -52,7 +52,7 @@ export default function StudioGrid() {
           href="https://instagram.com/haletextilestudio"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 mt-4 font-body text-[10px] tracking-[0.25em] uppercase text-terracotta hover:text-terracotta-dark transition-colors duration-200"
+          className="inline-flex items-center gap-1.5 mt-4 font-body text-[12px] tracking-[0.25em] uppercase text-terracotta hover:text-terracotta-dark transition-colors duration-200"
         >
           @haletextilestudio
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">

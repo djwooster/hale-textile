@@ -8,10 +8,9 @@ import MobileMenu from "./MobileMenu";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/fabric-library", label: "Fabric Library" },
+  { href: "/fabric-library", label: "The Collection" },
   { href: "/wallpaper", label: "Wallpaper" },
   { href: "/accessories", label: "Accessories" },
-  { href: "/partner-program", label: "Partner Program" },
   { href: "/about", label: "About" },
 ];
 
@@ -62,7 +61,7 @@ export default function Navbar() {
                 Hale
               </span>
               <span
-                className="font-body text-[9px] lg:text-[10px] tracking-[0.35em] uppercase font-light -mt-0.5"
+                className="font-body text-[9px] lg:text-[12px] tracking-[0.35em] uppercase font-light -mt-0.5"
                 style={{ color: scrolled || !isHome ? "var(--terracotta)" : "var(--muted-rose)" }}
               >
                 Textile Studio

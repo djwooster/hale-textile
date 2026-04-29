@@ -73,12 +73,12 @@ export default function PartnerProgramPage() {
                 <br />
                 <span className="italic text-terracotta">the people who use it</span>.
               </h2>
-              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed mb-5">
+              <p className="font-body text-[20px] font-light text-warm-gray leading-relaxed mb-5">
                 Our trade program gives designers and firms direct access to the
                 full Hale library at preferred pricing, with the personal
                 relationship that makes projects go smoothly.
               </p>
-              <p className="font-body text-[18px] font-light text-warm-gray leading-relaxed">
+              <p className="font-body text-[20px] font-light text-warm-gray leading-relaxed">
                 We believe the best work happens when the designer and the material
                 source are truly aligned. That&apos;s the foundation of every partner
                 relationship we build.
@@ -106,7 +106,7 @@ export default function PartnerProgramPage() {
       <section className="py-20 lg:py-28 bg-cream">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <AnimatedSection className="mb-14 text-center">
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-4">Program Tiers</p>
+            <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-4">Program Tiers</p>
             <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">Find your fit</h2>
           </AnimatedSection>
 
@@ -128,7 +128,7 @@ export default function PartnerProgramPage() {
                 </p>
                 <ul className={`space-y-2.5 mb-8 border-t pt-6 ${tier.accent ? "border-navy-light" : "border-linen"}`}>
                   {tier.perks.map((p) => (
-                    <li key={p} className={`flex items-start gap-2 font-body text-[10px] tracking-[0.12em] ${tier.accent ? "text-linen" : "text-charcoal"}`}>
+                    <li key={p} className={`flex items-start gap-2 font-body text-[12px] tracking-[0.12em] ${tier.accent ? "text-linen" : "text-charcoal"}`}>
                       <svg className="w-3 h-3 mt-0.5 flex-shrink-0 text-terracotta" fill="none" viewBox="0 0 12 12">
                         <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                       </svg>
@@ -138,7 +138,7 @@ export default function PartnerProgramPage() {
                 </ul>
                 <Link
                   href="/contact"
-                  className={`inline-flex items-center gap-2 font-body text-[10px] tracking-[0.25em] uppercase font-medium px-6 py-3 border transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 font-body text-[12px] tracking-[0.25em] uppercase font-medium px-6 py-3 border transition-all duration-300 ${
                     tier.accent
                       ? "border-terracotta text-terracotta hover:bg-terracotta hover:text-warm-white"
                       : "border-navy text-navy hover:bg-navy hover:text-warm-white"
@@ -157,7 +157,7 @@ export default function PartnerProgramPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-12">
           <AnimatedSection className="mb-14">
             <TextileDivider className="mb-14" />
-            <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-4">How It Works</p>
+            <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-4">How It Works</p>
             <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">Three steps</h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-10">
@@ -166,7 +166,7 @@ export default function PartnerProgramPage() {
                 <p className="font-display text-6xl font-light text-linen mb-4">{p.step}</p>
                 <h3 className="font-display text-2xl font-light text-navy mb-3">{p.title}</h3>
                 <p
-                  className="font-body text-[18px] font-light text-warm-gray leading-relaxed"
+                  className="font-body text-[20px] font-light text-warm-gray leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: p.body }}
                 />
               </AnimatedSection>

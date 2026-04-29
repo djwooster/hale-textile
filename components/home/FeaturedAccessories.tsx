@@ -36,7 +36,7 @@ export default function FeaturedAccessories() {
           <TextileDivider className="mb-14" />
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
-              <p className="font-body text-[10px] tracking-[0.35em] uppercase text-terracotta mb-4">
+              <p className="font-body text-[12px] tracking-[0.35em] uppercase text-terracotta mb-4">
                 Made from the Library
               </p>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-navy">
@@ -45,7 +45,7 @@ export default function FeaturedAccessories() {
             </div>
             <Link
               href="/accessories"
-              className="inline-flex items-center gap-2 font-body text-[10px] tracking-[0.25em] uppercase font-medium text-navy hover:text-terracotta transition-colors duration-300 self-start md:self-end"
+              className="inline-flex items-center gap-2 font-body text-[12px] tracking-[0.25em] uppercase font-medium text-navy hover:text-terracotta transition-colors duration-300 self-start md:self-end"
             >
               View all accessories
               <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
@@ -78,7 +78,7 @@ export default function FeaturedAccessories() {
                   <h3 className="font-display text-2xl font-light text-navy group-hover:text-terracotta transition-colors duration-300">
                     {item.name}
                   </h3>
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-warm-gray mt-1">
+                  <p className="font-body text-[12px] tracking-[0.2em] uppercase text-warm-gray mt-1">
                     {item.from}
                   </p>
                 </div>

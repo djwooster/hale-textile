@@ -6,10 +6,9 @@ import TextileMotif from "@/components/shared/TextileMotif";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/fabric-library", label: "Fabric Library" },
+  { href: "/fabric-library", label: "The Collection" },
   { href: "/wallpaper", label: "Wallpaper" },
   { href: "/accessories", label: "Accessories" },
-  { href: "/partner-program", label: "Partner Program" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Visit Us" },
 ];
@@ -73,7 +72,7 @@ export default function MobileMenu({ onClose }: Props) {
 
         {/* Bottom tagline */}
         <motion.p
-          className="mt-12 font-body text-[10px] tracking-[0.3em] uppercase text-navy-light"
+          className="mt-12 font-body text-[12px] tracking-[0.3em] uppercase text-navy-light"
           variants={item}
         >
           Premium Fabrics · Bespoke Accessories
