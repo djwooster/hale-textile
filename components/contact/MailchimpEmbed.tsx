@@ -7,6 +7,11 @@ export default function MailchimpEmbed() {
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+      <style>{`
+        #mc_embed_signup select {
+          border: 1px solid #D4C9B8 !important;
+        }
+      `}</style>
 
       <div id="mc_embed_signup">
         <form
