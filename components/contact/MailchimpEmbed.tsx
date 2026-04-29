@@ -63,6 +63,7 @@ export default function MailchimpEmbed() {
         </form>
       </div>
 
+      <Script src="//code.jquery.com/jquery-3.7.1.min.js" strategy="lazyOnload" />
       <Script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" strategy="lazyOnload" />
       <Script id="mc-validate-init" strategy="lazyOnload">{`
         (function($) {
