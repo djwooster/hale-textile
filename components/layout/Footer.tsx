@@ -44,13 +44,13 @@ export default function Footer() {
             </p>
             <address className="not-italic font-body text-base text-warm-gray leading-relaxed">
               <p className="text-linen font-medium mb-1">Hale Textile Studio</p>
-              <p>142 Weavers Lane</p>
-              <p>San Francisco, CA 94103</p>
+              <p>1050 Queen St. Suite #100</p>
+              <p>Honolulu, HI 96814</p>
               <a
-                href="mailto:hello@hale-textile.com"
+                href="mailto:info@haletexttilestudio.com"
                 className="block mt-3 text-terracotta hover:text-terracotta-light transition-colors duration-200"
               >
-                hello@hale-textile.com
+                info@haletexttilestudio.com
               </a>
             </address>
           </div>

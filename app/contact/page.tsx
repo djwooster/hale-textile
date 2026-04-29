@@ -69,10 +69,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Decorative motif */}
-                <div className="opacity-10">
-                  <TextileMotif size={120} color="#0A2A3A" />
-                </div>
               </div>
             </AnimatedSection>
 
