@@ -21,6 +21,21 @@ export default function MailchimpEmbed() {
           name="mc-embedded-subscribe-form"
           className="validate"
           target="_blank"
+          onSubmit={async (e) => {
+            e.preventDefault();
+            const form = e.currentTarget;
+            const email = (form.querySelector("#mce-EMAIL") as HTMLInputElement)?.value;
+            if (email) {
+              try {
+                await fetch("/api/tag", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ email, tag: "Contact" }),
+                });
+              } catch (_) {}
+            }
+            form.submit();
+          }}
         >
           <div id="mc_embed_signup_scroll">
             <div className="mc-field-group">
