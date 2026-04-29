@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
 import PageHero from "@/components/shared/PageHero";
+import MailchimpEmbed from "@/components/contact/MailchimpEmbed";
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import TextileDivider from "@/components/shared/TextileDivider";
-import TextileMotif from "@/components/shared/TextileMotif";
 
 const reasons = [
   "Fabric enquiry",
@@ -16,12 +14,6 @@ const reasons = [
 ];
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <>
@@ -78,6 +70,9 @@ export default function ContactPage() {
                 Send a Message
               </p>
 
+              <MailchimpEmbed />
+
+              {/* Original form — commented out while testing Mailchimp embed
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-5">
@@ -134,7 +129,7 @@ export default function ContactPage() {
                     <textarea
                       rows={6}
                       className="w-full border border-linen bg-transparent font-body text-[20px] text-charcoal px-4 py-3 focus:border-navy focus:outline-none transition-colors duration-200 resize-none"
-                      placeholder="Tell us a little about what you&apos;re working on…"
+                      placeholder="Tell us a little about what you're working on…"
                     />
                   </div>
 
@@ -152,18 +147,16 @@ export default function ContactPage() {
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                   className="border border-linen p-12 text-center"
                 >
-                  <div className="opacity-20 mb-6 flex justify-center">
-                    <TextileMotif size={80} color="#d4614a" />
-                  </div>
                   <p className="font-display text-3xl font-light text-navy mb-3">
                     Thank you.
                   </p>
                   <p className="font-body text-[20px] font-light text-warm-gray">
-                    We&apos;ll be in touch soon. In the meantime, feel free to
+                    We'll be in touch soon. In the meantime, feel free to
                     browse the library.
                   </p>
                 </motion.div>
               )}
+              */}
             </AnimatedSection>
           </div>
         </div>
