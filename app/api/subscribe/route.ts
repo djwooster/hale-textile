@@ -1,4 +1,20 @@
 import { NextResponse } from "next/server";
+import { createHash } from "crypto";
+
+async function applyTag(server: string, apiKey: string, audienceId: string, email: string) {
+  const hash = createHash("md5").update(email.toLowerCase()).digest("hex");
+  await fetch(
+    `https://${server}.api.mailchimp.com/3.0/lists/${audienceId}/members/${hash}/tags`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tags: [{ name: "Newsletter", status: "active" }] }),
+    }
+  );
+}
 
 export async function POST(req: Request) {
   const { email } = await req.json();
@@ -30,10 +46,12 @@ export async function POST(req: Request) {
   const data = await response.json();
 
   if (response.ok) {
+    await applyTag(server, apiKey, audienceId, email);
     return NextResponse.json({ success: true });
   }
 
   if (data.title === "Member Exists") {
+    await applyTag(server, apiKey, audienceId, email);
     return NextResponse.json({ error: "You're already subscribed." }, { status: 400 });
   }
 
